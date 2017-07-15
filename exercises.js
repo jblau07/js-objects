@@ -15,18 +15,13 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     Console.log your object.
 */
     
-var books = {};
+var books = {
+  title:"The Obstacle is the Way", 
+  author:"Ryan Holiday", 
+  category:"Self Help",
+  pages:200};
 
-books.title = "The Obstacle is the Way";
-
-books.author = "Ryan Holiday";
-
-books.category = "Self Help"
-
-books.pages = 200
-
-console.log( books );
-
+console.log(books);
 
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
@@ -42,6 +37,18 @@ console.log( books );
  
  "My dog `name` is `age` year old and likes to `speak`."
 */ 
+
+var dog = {
+name:"Chuck",
+age:3,
+vegetarian:false,
+color:["brown", "white"],
+speak: function(){
+  return "bark!";
+}
+}
+
+console.log("My " + dog.name + " is " + dog.age + " year old and likes to " + dog.speak());
 
 
 
@@ -59,7 +66,15 @@ console.log( books );
   Console.log the object.
 */
 
+var kicks = {}
+kicks.brand = "Nike";
+kicks.color ="red";
+kicks.size = 11;
+kicks.buy = function(){
+  return "Hell Yeah";
+}
 
+console.log(kicks);
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -68,6 +83,11 @@ console.log( books );
             - add a property named `size` and set it to a number value between `0` and `20`.
             - add a property named `contents` and set it to be an empty array.
 */
+
+var plainBox = {}
+plainBox.color = "orange";
+plainBox.size = 11;
+plainBox.contents = [];
 
 
 /*
@@ -78,7 +98,13 @@ console.log( books );
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
 */
-
+var stockCar = {
+  model:"Toyota",
+  year:2010,
+  automaticTransmission:true,
+  driver:null,
+  passengers:[],
+}
 
 /*
 
@@ -96,6 +122,16 @@ console.log( books );
    the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
    the value at `name`, and just the value at `age`.
  */
+
+var plainPerson = {};
+
+function buildPerson(person, nameString, age){
+  person.name = nameString;
+  person.age = age;
+  return person
+}
+console.log(buildPerson(plainPerson, "Justin", 28));
+
 
 
 /*
@@ -122,6 +158,61 @@ console.log( books );
             =====
             ...
  */
+
+ var arrayOfObjects = [  {
+    id: 0,
+    date: "Monday Jan 25 2015 2:01 PM",
+    total: "279.38"
+  },
+  {
+    id: 1,
+    date: "Monday Jan 27 2015 11:31 AM",
+    total: "79.80"
+  },
+  {
+    id: 2,
+    date: "Monday Feb 1 2015 7:56 AM",
+    total: "15.62"
+  },
+  {
+    id: 3,
+    date: "Monday Feb 1 2015 9:43 AM",
+    total: "19.83"
+  },
+  {
+    id: 4,
+    date: "Monday Feb 1 2015 11:08 PM",
+    total: "56.69"
+  },
+  {
+    id: 5,
+    date: "Monday Feb 13 2015 10:22 AM",
+    total: "137.92"
+  },
+  {
+    id: 6,
+    date: "Monday Feb 14 2015 6:54 PM",
+    total: "938.65"
+  },
+  {
+    id: 7,
+    date: "Monday Feb 14 2015 7:17 PM",
+    total: "43.77"
+  },
+  {
+    id: 8,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "28.54"
+  },
+  {
+    id: 9,
+    date: "Monday Feb 14 2015 7:18 PM",
+    total: "194.33"
+  }]
+
+function printOrders(orders){
+  for(var i =0; i<arrayOfObjects.length; i++)
+}
 
 
 /*
